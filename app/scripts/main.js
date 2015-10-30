@@ -63,7 +63,7 @@ app.showPage=function(pageId,successCallback,fallCallback){
 app.plugin=(function(){
   function AlertModel(){
     var self=this;
-    self.title=ko.observable("test");
+    self.title=ko.observable();
     self.content=ko.observable();
     self.confirm;
     self.show=function(title,content,successCallback){
@@ -76,7 +76,12 @@ app.plugin=(function(){
       $("alert").removeClass("active");
     }
   }
+  function ConfirmModel(){
+
+  }
+
   var alertModel=new AlertModel();
+
   ko.applyBindings(alertModel,document.getElementById("alert"));
   return {alert:alertModel}
 })();

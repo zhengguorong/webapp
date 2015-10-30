@@ -34,17 +34,17 @@
     <!-- 放置公用组件 -->
     <div id="plugin">
         <!-- alert提示框 -->
-        <div id="alert">
+        <div id="alert" class="popup alert">
             <div class="title" data-bind="text:title">温馨提示</div>
             <div class="content" data-bind="text:content">是否购买</div>
             <div class="ok" data-bind="click:confirm"><button>确定</button></div>
         </div>
         <!-- confirm提示框 -->
-        <div id="confirm"></div>
+        <div id="confirm" class="popup confirm"></div>
         <!-- toast提示框 -->
-        <div id="toast"></div>
+        <div id="toast" class="popup toast"></div>
         <!-- 页面加载中 -->
-        <div id="loading">
+        <div id="loading" class="popup loading">
             加载中...
         </div>
     </div>
