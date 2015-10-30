@@ -60,6 +60,27 @@ app.showPage=function(pageId,successCallback,fallCallback){
     }
 }
 
+app.plugin=(function(){
+  function AlertModel(){
+    var self=this;
+    self.title=ko.observable("test");
+    self.content=ko.observable();
+    self.confirm;
+    self.show=function(title,content,successCallback){
+       $("#alert").addClass("active");
+       if(successCallback){
+         self.confirm=successCallback;
+       }
+    }
+    self.hide=function(){
+      $("alert").removeClass("active");
+    }
+  }
+  var alertModel=new AlertModel();
+  ko.applyBindings(alertModel,document.getElementById("alert"));
+  return {alert:alertModel}
+})();
+
 
 
 $(function(){
