@@ -70,20 +70,43 @@ app.plugin=(function(){
        $("#alert").addClass("active");
        if(successCallback){
          self.confirm=successCallback;
+       }else{
+         self.hide();
        }
     }
     self.hide=function(){
-      $("alert").removeClass("active");
+      $("#alert").removeClass("active");
     }
   }
   function ConfirmModel(){
-
+    var self=this;
+    self.title=ko.observable();
+    self.content=ko.observable();
+    self.confirm;
+    self.cancel;
+    self.show=function(title,content,successCallback,failCallback){
+      $("#confirm").addClass("active");
+      if(successCallback){
+        self.confirm=successCallback;
+      }else{
+        self.hide();
+      }
+      if(failCallback){
+        failCallback()
+      }else{
+        self.hide();
+      }
+    }
+    self.hide=function(){
+      $("#confirm").removeClass("active");
+    }
   }
 
   var alertModel=new AlertModel();
-
+  var confirmModel=new ConfirmModel();
   ko.applyBindings(alertModel,document.getElementById("alert"));
-  return {alert:alertModel}
+  ko.applyBindings(confirmModel,document.getElementById("confirm"));
+  return {alert:alertModel,confirm:confirmModel}
 })();
 
 
