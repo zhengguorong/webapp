@@ -1,0 +1,72 @@
+<!doctype html>
+<html class="no-js" lang="" id="html">
+  <head>
+    <meta charset="utf-8">
+    <title>webapp</title>
+    <meta name="description" content="">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
+
+    <link rel="shortcut icon" href="/favicon.ico">
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+    <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+
+    <!-- build:css(.) styles/vendor.css -->
+    <!-- bower:css -->
+    <!-- endbower -->
+    <!-- endbuild -->
+    <!-- build:css(.tmp) styles/main.css -->
+    <link rel="stylesheet" href="styles/main.css">
+    <!-- endbuild -->
+    <!-- build:js scripts/vendor/modernizr.js -->
+    <script src="/bower_components/modernizr/modernizr.js"></script>
+    <!-- endbuild -->
+  </head>
+  <body>
+    <!--[if lt IE 10]>
+      <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+    <![endif]-->
+
+    
+    <div class="container" id="appView">
+    <!-- 放置公用组件 -->
+    <div id="plugin">
+        <!-- alert提示框 -->
+        <div class="alert">
+            <div class="title">温馨提示</div>
+            <div class="content">是否购买</div>
+            <div class="ok"><button>确定</button></div>
+        </div>
+        <!-- confirm提示框 -->
+        <div class="confirm"></div>
+        <!-- toast提示框 -->
+        <div class="toast"></div>
+        <!-- 页面加载中 -->
+        <div class="loading">
+            加载中...
+        </div>
+    </div>
+
+    </div>
+
+    
+
+    <!-- build:js(.) scripts/vendor.js -->
+    <!-- bower:js -->
+    <script src="/bower_components/jquery/dist/jquery.js"></script>
+    <script src="/bower_components/knockout/dist/knockout.js"></script>
+    <!-- endbower -->
+    <!-- endbuild -->
+
+
+    <!-- build:js scripts/main.js -->
+    <script src="../bower_components/sammy/lib/min/sammy-latest.min.js"></script>
+    <script src="scripts/main.js"></script>
+    <script src="scripts/cart/cart.js"></script>
+    <script src="scripts/home/index.js"></script>
+    <script src="scripts/cate/category.js"></script>
+    <!-- endbuild -->
+  </body>
+</html>
