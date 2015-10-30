@@ -64,8 +64,6 @@ app.showPage=function(pageId,successCallback,fallCallback){
 
 $(function(){
   app.router.run("#/home");
-
-
   /* 添加用户窗口事件 改变根字号大小 */
   function addEvent(obj,type,fn){
       if(obj.addEventListener){
