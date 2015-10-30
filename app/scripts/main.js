@@ -14,13 +14,13 @@ app.router = $.sammy(function(){
       app.showPage("cartPage",null,function(){
         app.cartModel = new CartModel();
         app.renderTemplate("views/cart/cart.html",app.cartModel,"cartPage");
-      });    
-  })  
+      });
+  })
   this.get("#/category",function(){
       app.showPage("categoryPage",null,function(){
         app.categoryModel = new CategoryModel();
         app.renderTemplate("views/cate/category.html",app.categoryModel,"categoryPage");
-      });    
+      });
   })
 
 })
@@ -61,8 +61,11 @@ app.showPage=function(pageId,successCallback,fallCallback){
 }
 
 
+
 $(function(){
   app.router.run("#/home");
+
+
   /* 添加用户窗口事件 改变根字号大小 */
   function addEvent(obj,type,fn){
       if(obj.addEventListener){
@@ -74,7 +77,6 @@ $(function(){
 
 
   function autoSize(){
-    console.log("test")
       var font = Math.round(win_W / 16);
       var HTML=document.getElementById('html');
       var win_W = $(".container").width();
