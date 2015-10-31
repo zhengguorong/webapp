@@ -32,28 +32,55 @@
 
     <div class="container" id="appView">
     <!-- 放置公用组件 -->
-    <div id="plugin">
-        <!-- alert提示框 -->
-        <div id="alert" class="popup alert">
-            <div class="title" data-bind="text:title">温馨提示</div>
-            <div class="content" data-bind="text:content">是否购买</div>
-            <div class="ok" data-bind="click:confirm"><button>确定</button></div>
+      <!-- 透明背景遮罩层 -->
+      <div class="TB_overlayBG"></div>
+      <!-- confirm弹出层 -->
+      <div class="TB_window popup confirm fadeInDown animated" id="confirm" style=" margin-left:-140px; margin-top:-30%;">
+        <div class="attrLayer couponLayer">
+          <span class="close cancel"><a ></a></span>
+          <div class="title">
+            <p data-bind="text:title"></p>
+          </div>
+          <div class="couList">
+            <div class="address_del">
+              <p class="p_txt" data-bind="text:content"></p>
+              <div class="btns">
+                <a  class="m_btn mr10 confirm">确定</a>
+                <a  class="btn02 cancel">取消</a>
+              </div>
+            </div>
+          </div>
         </div>
-        <!-- confirm提示框 -->
-        <div id="confirm" class="popup confirm">
-          <div class="title" data-bind="text:title">温馨提示</div>
-          <div class="content" data-bind="text:content">是否购买</div>
-          <div class="ok" data-bind="click:cancel"><button>取消</button></div>
-          <div class="ok" data-bind="click:confirm"><button>确定</button></div>
-
+      </div>
+      <!-- alert弹出层 -->
+      <div class="TB_window popup alert fadeInDown animated" id="alert" style=" margin-left:-140px; margin-top:-30%;">
+        <div class="attrLayer couponLayer">
+          <span class="close cancel"><a ></a></span>
+          <div class="title">
+            <p data-bind="text:title"></p>
+          </div>
+          <div class="couList">
+            <div class="address_del">
+              <p class="p_txt" data-bind="text:content"></p>
+              <div class="btns">
+                <a  class="m_btn mr10 confirm" data-bind="text:btnName"></a>
+              </div>
+            </div>
+          </div>
         </div>
-        <!-- toast提示框 -->
-        <div id="toast" class="popup toast"></div>
-        <!-- 页面加载中 -->
-        <div id="loading" class="popup loading">
-            加载中...
-        </div>
-    </div>
+      </div>
+      <!-- 加载中 -->
+      <div class="loading popup">
+        <span class="load_icon"></span>
+        <span class="load_txt">加载中...</span>
+      </div>
+      <!-- toast层 -->
+      <div id="toast" class="prompt toast">
+        <div class="pmt_default" ><!--ko text:content--><!--/ko--></div>
+        <div class="pmt_success"><i class="i_suc"></i><!--ko text:content--><!--/ko--></div>
+        <div class="pmt_failure"><i class="i_fail"></i><!--ko text:content--><!--/ko--></div>
+        <div class="pmt_sigh"><i class="i_sigh"></i><!--ko text:content--><!--/ko--></div>
+      </div>
 
     </div>
 
