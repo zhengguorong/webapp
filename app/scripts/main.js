@@ -212,6 +212,7 @@ app.toast=(function(){
     callback&&callback();
   }
   var _show=function(obj,content){
+    console.log(content)
     toast.content(content);
     obj.addClass("active");
   }
