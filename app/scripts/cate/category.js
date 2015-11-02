@@ -1,3 +1,7 @@
+/**
+ * 商品分类
+ * @constructor
+ */
 function CategoryModel(){
 	var self=this;
 	self.categoryList=ko.observableArray([]);

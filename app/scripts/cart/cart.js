@@ -1,3 +1,7 @@
+/**
+ * 购物车
+ * @constructor
+ */
 var CartModel=function(){
 	var self=this;
 	self.title="this is a cart";
